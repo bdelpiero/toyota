@@ -27,6 +27,7 @@
   src: url("./fonts/TOYOTATYPE-SEMIBOLD.TTF") format("truetype");
 }
 
+
 h3 {
   display: block;
   font-size: 1.17em;
@@ -37,17 +38,37 @@ h3 {
   font-weight: bold;
 }
 
+video {
+  display: block;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+/***** COUNTDOWN *****/
+
+.main-countdown {
+    height: 100vh;
+    position: relative;
+    width: calc(100vw - 28.125vw);
+}
+
 .container-logo-countdown {
   display: block;
-  /* left: 52.5%; */
+  left: 52.5%; 
   position: absolute;
   /* -webkit-transform: translate(-50%,0);
     -moz-transform: translate(-50%,0);
     -o-transform: translate(-50%,0);
     -ms-transform: translate(-50%,0); */
   transform: translate(-50%, 0);
-  /* top: 4.166666666666666vw;
-    width: 34.63541666666667vw; */
+  top: 4.166666666666666vw;
+  /* width: 34.63541666666667vw; */
 }
 
 .container-countdown h2 {
@@ -93,10 +114,34 @@ h3 {
   display: none;
 }
 
+/***** FORM *****/
+
+.main-form {
+    z-index: 100;
+    -webkit-box-align: center;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+    /* padding: 0 4.166666666666666vw; */
+    position: fixed;
+    /* right: 0; */
+    bottom: 2vh;
+    top: 0;
+    right: 15px;
+    /* width: 28.125vw; */
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* padding-bottom: 3.125vw;
+  padding-top: 8.854166666666668vw; */
+}
+
+.button-close {
+    display: none; 
 }
 
 .form-container h3 {
@@ -110,10 +155,25 @@ h3 {
     margin-right: .5vw; */
 }
 
+.form-container .field::placeholder {
+    color: #fff;
+}
+
 .form-container .email {
   background: url(./img/Icono\ Candado.png) calc(100% - 17px) 50% no-repeat
     transparent;
   background-size: 16px 20px;
+}
+
+.form-container .field,
+  .form-container select {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: "ToyotaType-Regular";
+    width: 100%;
 }
 
 .form-container select {
@@ -180,45 +240,132 @@ h3 {
 .form-button button {
   background: url(./img/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat
     #e81527;
-  /* background-size: 1.40625vw .78125vw; */
+  background-size: 1.40625vw .78125vw;
   color: #fff;
   cursor: pointer;
   font-family: "ToyotaType-Semibold";
-  /* font-size: .8333333333333334vw;
+  font-size: .8333333333333334vw;
     height: 3.385416666666667vw;
-    padding-left: 1.5625vw; */
+    padding-left: 1.5625vw;
   text-align: left;
   text-transform: uppercase;
   width: 100%;
 }
 
+@media only screen and (max-width: 1366px) {
+    
+    /***** COUNTDOWN *****/
+
+    .container-logo-countdown {
+        top: 70px;
+        /* width: 34.63541666666667vw; */
+    }
+    .main-countdown {
+        width: calc(100vw - 400px);
+    }
+
+    .container-countdown h2 { 
+        font-size: 1.464128843338214vw;
+        margin-top: 1.464128843338214vw;
+    }
+
+    #countdown {
+        width: 50vw;
+    }
+      
+    #countdown li {
+        /* font-size: 1.125rem; */
+        padding: 0.75rem;
+        font-size: 1rem;
+        padding: 0.75;
+    }
+    
+    #countdown li span {
+        width: 60px;
+        font-size: 2rem;
+        width: 70px;
+        padding-bottom: 10px;
+    }
+   
+
+    /***** FORM *****/
+    .main-form {
+        padding: 0 55px;
+        width: 385px;
+    }
+    /* .form-container{
+        padding-bottom: 45px;
+    } */
+    .form-container .field,
+    .form-container select {
+        font-size: 11px;
+        height: 32px;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    .form-button button {
+        background-size: 27px 15px;
+        font-size: 11px;
+        height: 46px;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+    .form-container .checkbox {
+        width: 1.2em;
+        height: 0.9rem;
+    }
+    .checkbox-label {
+        font-size: 11px;
+    }
+}
+
 @media only screen and (max-width: 770px) {
+
+  /***** COUNTDOWN *****/
+  .main-countdown {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+  }
+
+  #video-mobile {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  #video-desktop {
+      display: none;
+  }
   .container-logo-countdown {
     top: 50px;
     width: 500px;
     left: 47%;
   }
+  .container-countdown h2 {
+    margin-top: 25px;
+    font-size: 22px;
+  }
+
+  #countdown {
+      width: 100%;
+  }
+
   #countdown li {
     font-size: 1.125rem;
     padding: 0.75rem;
-    font-size: 1.125rem;
+    /* font-size: 1.125rem; */
+    font-size: 14px;
     padding: 0.75;
   }
 
   #countdown li span {
     width: 60px;
+    font-size: 2.5rem;
+    width: 70px;
+    padding-bottom: 10px;
   }
-  .button-close {
-    background: url(./img/btn-close.png) center no-repeat;
-    background-size: cover;
-    display: block;
-    height: 38px;
-    position: fixed;
-    right: 15px;
-    text-indent: -999999px;
-    top: 15px;
-    width: 38px;
-  }
+
   .button-open-form {
     bottom: 0;
     display: block;
@@ -241,6 +388,9 @@ h3 {
     text-transform: uppercase;
     width: 100%;
   }
+
+  /***** FORM *****/
+
   .main-form {
     background-color: #000;
     bottom: 0;
@@ -254,8 +404,19 @@ h3 {
     width: 100vw;
     z-index: 100;
   }
+  .button-close {
+    background: url(./img/btn-close.png) center no-repeat;
+    background-size: cover;
+    display: block;
+    height: 38px;
+    position: fixed;
+    right: 15px;
+    text-indent: -999999px;
+    top: 15px;
+    width: 38px;
+  }
   .form-container {
-    padding-bottom: 80px;
+    padding-bottom: 0; 
     padding-top: 80px;
   }
   .form-container h3 {
@@ -268,18 +429,12 @@ h3 {
   .form-container .field,
   .form-container select {
     -webkit-appearance: none;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 0;
-    color: #fff;
-    font-family: "ToyotaType-Regular";
     font-size: 15px;
     height: 45px;
     letter-spacing: 1px;
     margin-bottom: 10px;
     outline: 0;
     padding: 0 15px;
-    width: 100%;
   }
   /* .form-container select {
 
@@ -302,30 +457,8 @@ h3 {
     height: 55px;
     padding-left: 30px;
     margin-bottom: 80px;
-    margin-top: 20px;
   }
-  #video-mobile {
-    display: block;
-    object-fit: cover;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  .container-countdown h2 {
-    margin-top: 25px;
-    font-size: 22px;
-  }
-  #countdown li {
-    font-size: 14px;
-  }
-
-  #countdown li span {
-    font-size: 2.5rem;
-    width: 70px;
-    padding-bottom: 10px;
-  }
+  
 }
 
 @media only screen and (max-width: 600px) {
