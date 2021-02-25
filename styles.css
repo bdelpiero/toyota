@@ -45,10 +45,19 @@ video {
   height: 100vh;
 }
 
+input {
+  outline:none;
+}
+
 .container {
     height: 100vh;
     width: 100vw;
 }
+
+/* .phone-number {
+    float: right;
+    position: relative;
+} */
 
 /***** COUNTDOWN *****/
 
@@ -237,7 +246,7 @@ video {
 }
 
 .phone-number {
-  width: 62% !important;
+  width: 65% !important;
 }
 
 .checkbox-label a {
@@ -489,4 +498,21 @@ video {
     padding-bottom: 8px;
     /* letter-spacing: 0.5rem; */
   }
+}
+
+/***** Error messages ****/
+
+label.error {
+    display: block;
+    color: red;
+    margin: 3px 0;
+    font-family: "ToyotaType-Regular";
+    font-size: 10px;
+    /* display: block; */
+}
+
+.field.error,
+select.error {
+    border-color: red;
+    margin-bottom: 0;
 }

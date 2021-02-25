@@ -25,13 +25,15 @@
                         <input class="field email"  type="email" name="email" id="email" placeholder="Email*" />
 
                         <div class="phone-number-fields">
-                            <label for="areacode" style="display:none;"></label>
-                            <input class="field area-code" type="areacode" name="areacode" id="areacode" placeholder="Cód. area" />
-                            
+                            <div class="area-code" style="display: flex; flex-direction: column; ">
+                                <label for="areacode" style="display:none;"></label>
+                                <input class="field " type="areacode" name="areacode" id="areacode" placeholder="Cód. area" />
+                            </div>
 
-                            <label for="phonenumber"></label>
-                            <input class="field phone-number" type="phonenumber" name="phonenumber" id="phonenumber" placeholder="Teléfono" />
-                            
+                            <div class="phone-number" style="display: flex; flex-direction: column; ">
+                                <label for="phonenumber"></label>
+                                <input class="field" type="phonenumber" name="phonenumber" id="phonenumber" placeholder="Teléfono" />
+                            </div>
                         </div>
 
                         <label for="province"></label>
