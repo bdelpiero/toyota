@@ -73,6 +73,7 @@ h3 {
   list-style-type: none;
   padding: 1em;
   font-family: "ToyotaType-Light";
+  font-size: 70px;
 }
 
 #countdown li span {
@@ -80,6 +81,8 @@ h3 {
   font-size: 4.5rem;
   font-family: "ToyotaType-Light";
   border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 #video-mobile {
@@ -133,7 +136,7 @@ h3 {
 }
 
 .form-container .checkbox {
-  width: 1.3em;
+  width: 1.5em;
   height: 1.3em;
   background-color: black;
   border-radius: 50%;
@@ -192,7 +195,7 @@ h3 {
 @media only screen and (max-width: 770px) {
   .container-logo-countdown {
     top: 50px;
-    width: 440px;
+    width: 500px;
     left: 47%;
   }
   #countdown li {
@@ -312,6 +315,16 @@ h3 {
   }
   .container-countdown h2 {
     margin-top: 25px;
+    font-size: 22px;
+  }
+  #countdown li {
+    font-size: 14px;
+  }
+
+  #countdown li span {
+    font-size: 2.5rem;
+    width: 70px;
+    padding-bottom: 10px;
   }
 }
 
@@ -325,7 +338,7 @@ h3 {
     padding: 0 50px;
   }
   .container-countdown h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   #countdown li {
     font-size: 12px;
@@ -333,5 +346,8 @@ h3 {
 
   #countdown li span {
     width: 60px;
+    font-size: 1.8rem;
+    padding-bottom: 8px;
+    /* letter-spacing: 0.5rem; */
   }
 }
