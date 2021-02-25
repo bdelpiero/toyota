@@ -8,62 +8,75 @@
     <title>Toyota - teaser</title>
 </head>
 <body>
-    
-    <div class="main-form">
-            <span class="button-close" onclick="closeForm()"></span>
-            <div class="form-container">
-                <img src="./img/Logo Toyota Cross.png" alt="">
-                <h3>SEA EL PRIMERO EN RECIBIR LAS NOVEDADES DEL NUEVO COROLLA CROSS</h3>
-                <form action="" name="registration">
-                    <label for="firstname"></label>
-                    <input class="field" type="text" name="firstname" id="firstname" placeholder="Nombre*" />
+    <div class="container">
+        <div class="main-form">
+                <span class="button-close" onclick="closeForm()"></span>
+                <div class="form-container">
+                    <img src="./img/Logo Toyota Cross.png" alt="">
+                    <h3>SEA EL PRIMERO EN RECIBIR LAS NOVEDADES DEL NUEVO COROLLA CROSS</h3>
+                    <form action="" name="registration">
+                        <label for="firstname"></label>
+                        <input class="field" type="text" name="firstname" id="firstname" placeholder="Nombre*" />
 
-                    <label for="lastname"></label>
-                    <input class="field"  type="text" name="lastname" id="lastname" placeholder="Apellido*" />
+                        <label for="lastname"></label>
+                        <input class="field"  type="text" name="lastname" id="lastname" placeholder="Apellido*" />
 
-                    <label for="email"></label>
-                    <input class="field"  type="email" name="email" id="email" placeholder="Email*" />
+                        <label for="email"></label>
+                        <input class="field email"  type="email" name="email" id="email" placeholder="Email*" />
 
-                    <label for="areacode"></label>
-                    <input class="field" type="areacode" name="areacode" id="areacode" placeholder="Cód. area" />
-                
-                    <label for="phonenumber">
-                    <input class="field" type="phonenumber" name="phonenumber" id="phonenumber" placeholder="Teléfono" />
+                        <div class="phone-number-fields">
+                            <label for="areacode" style="display:none;"></label>
+                            <input class="field area-code" type="areacode" name="areacode" id="areacode" placeholder="Cód. area" />
+                            
 
-                    <label for="province"></label>
-                    <select name="province" name="province" id="province">
-                        <option value="">Provincia</option>
-                    </select>
-                    
-                    <label for="province"></label>
-                    <select name="province" name="province" id="province">
-                        <option value="">Ciudad</option>
-                    </select>
+                            <label for="phonenumber"></label>
+                            <input class="field phone-number" type="phonenumber" name="phonenumber" id="phonenumber" placeholder="Teléfono" />
+                            
+                        </div>
 
-                    <label for="dealership"></label>
-                    <select name="dealership" name="dealership" id="dealership">
-                        <option value="">Concesionario</option>
-                    </select>
+                        <label for="province"></label>
+                        <select name="province" name="province" id="province">
+                            <option value="">Provincia</option>
+                        </select>
+                        
+                        <label for="city"></label>
+                        <select name="city" name="city" id="city">
+                            <option value="">Ciudad</option>
+                        </select>
 
-                    <div style="position: relative;">
-                        <input class="checkbox" type="checkbox" name="privacy_policy" id="privacy_policy" name="privacy_policy">
-                        <label for="privacy_policy" class="checkbox-label">He leído y acepto la <a href='https://www.toyota.com.ar/terminos-y-condiciones/'>Política de Privacidad</a>*.</label>
-                    </div>
+                        <label for="dealership"></label>
+                        <select name="dealership" name="dealership" id="dealership">
+                            <option value="">Concesionario</option>
+                        </select>
 
-                    <div class="form-button">
-                        <button type="submit">
-                            Registrarse
-                        </button>
-                    </div>
-                </form>
+                        <div style="position: relative;">
+                            <input class="checkbox" type="checkbox" name="privacy_policy" id="privacy_policy" name="privacy_policy">
+                            <label for="privacy_policy" class="checkbox-label">He leído y acepto la <a href='https://www.toyota.com.ar/terminos-y-condiciones/'>Política de Privacidad</a>*.</label>
+                        </div>
+
+                        <div class="form-button">
+                            <button type="submit">
+                                Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <div class="main-countdown">
+            <video autoplay muted loop id="video-mobile">
+                <source src="./img/Video Teaser Toyota Corolla Cross Mobile.mp4" type="video/mp4">
+            </video>
+            <div class="container-logo-countdown">
+                <div class="container-countdown">
+                    <h2>¡Estate atento! Llega el lanzamiento más esperado del año.</h2>
+                </div>
             </div>
-    </div>
-    <div class="main-countdown">
             <div class="button-open-form" onclick="openForm()">
                 <button>
                     Registrarse
                 </button>
             </div>
+        </div>
     </div>
     
     <script src="index.js"></script>

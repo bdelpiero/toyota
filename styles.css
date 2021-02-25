@@ -1,194 +1,299 @@
 * {
-    border: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
-    font-family: 'ToyotaType-Regular';
-    src:  url('./fonts/TOYOTATYPE-REGULAR.TTF') format('woff2');
+  font-family: "ToyotaType-Regular";
+  src: url("./fonts/TOYOTATYPE-REGULAR.TTF") format("truetype");
 }
 
 @font-face {
-    font-family: 'ToyotaType-Light';
-    src:  url('./fonts/TOYOTATYPE-LIGHT.TTF') format('woff2');
+  font-family: "ToyotaType-Light";
+  src: url("./fonts/TOYOTATYPE-LIGHT.TTF") format("truetype");
 }
 
+@font-face {
+  font-family: "ToyotaType-Semibold";
+  src: url("./fonts/TOYOTATYPE-SEMIBOLD.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "ToyotaType-Book";
+  src: url("./fonts/TOYOTATYPE-SEMIBOLD.TTF") format("truetype");
+}
 
 h3 {
-    display: block;
-    font-size: 1.17em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.container-logo-countdown {
+  display: block;
+  /* left: 52.5%; */
+  position: absolute;
+  /* -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0); */
+  transform: translate(-50%, 0);
+  /* top: 4.166666666666666vw;
+    width: 34.63541666666667vw; */
+}
+
+.container-countdown h2 {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "ToyotaType-Book";
+  /* font-size: .8854166666666666vw; */
+  font-style: italic;
+  font-weight: bolder;
+  /* margin-top: 2.083333333333333vw; */
+  text-align: center;
+}
+
+#video-mobile {
+  display: none;
 }
 
 .button-open-form {
-    display: none;
+  display: none;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .form-container h3 {
-    color: #fff;
-    font-family: "ToyotaType-Regular";
-    font-weight: lighter;
-    font-style: italic;
-    /* letter-spacing: .05vw;
+  color: #fff;
+  font-family: "ToyotaType-Regular";
+  font-weight: lighter;
+  font-style: italic;
+  /* letter-spacing: .05vw;
     line-height: 1.5vw;
     margin-bottom: 2.4vw;
     margin-right: .5vw; */
 }
 
+.form-container .email {
+  background: url(./img/Icono\ Candado.png) calc(100% - 17px) 50% no-repeat
+    transparent;
+  background-size: 16px 20px;
+}
+
+.form-container select {
+  appearance: none;
+  background: url(./img/ico-arrow-down.png) calc(100% - 17px) 50% no-repeat
+    transparent;
+  background-size: 14px 7px;
+  /* background-size: .7291666666666666vw .3645833333333333vw; */
+  border: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  font-family: "ToyotaType-Regular";
+  /* font-size: .78125vw;
+    height: 2.34375vw;
+    letter-spacing: 1px;
+    margin-bottom: .78125vw; */
+  outline: 0;
+  /* padding: 0 .78125vw; */
+  width: 100%;
+}
+
 .form-container .checkbox {
-    width: 1.3em;
-    height: 1.3em;
-    background-color: black;
-    border-radius: 50%;
-    margin-top: 1rem;
-    border: 1px solid #ddd;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
+  width: 1.3em;
+  height: 1.3em;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 1rem;
+  border: 1px solid #ddd;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
 }
 
 .form-container .checkbox:checked {
-    background-color: #E81527;
+  background-color: #e81527;
 }
 
 .checkbox-label {
-    margin-top: 50px;
-    color: #fff;
+  margin-top: 50px;
+  color: #fff;
 
-    font-family: "ToyotaType-Light";
-    font-size: .78125vw;
-    letter-spacing: 1px;
+  font-family: "ToyotaType-Light";
+  font-size: 0.78125vw;
+  letter-spacing: 1px;
 }
 
-/* .checkbox-label::before {
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    vertical-align: text-top;
-} */
+.phone-number-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.area-code {
+  width: 34% !important;
+}
+
+.phone-number {
+  width: 62% !important;
+}
 
 .checkbox-label a {
-    color: #fff;
+  color: #fff;
 }
 
 .form-button button {
-    background: url(./img/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat #e81527;
-    /* background-size: 1.40625vw .78125vw; */
-    color: #fff;
-    cursor: pointer;
-    font-family: "ToyotaType-Regular";
-    /* font-size: .8333333333333334vw;
+  background: url(./img/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat
+    #e81527;
+  /* background-size: 1.40625vw .78125vw; */
+  color: #fff;
+  cursor: pointer;
+  font-family: "ToyotaType-Semibold";
+  /* font-size: .8333333333333334vw;
     height: 3.385416666666667vw;
     padding-left: 1.5625vw; */
-    text-align: left;
-    text-transform: uppercase;
-    width: 100%;
+  text-align: left;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 @media only screen and (max-width: 770px) {
-    .button-close {
-        background: url(./img/btn-close.png) center no-repeat;
-        background-size: cover;
-        display: block;
-        height: 38px;
-        position: fixed;
-        right: 15px;
-        text-indent: -999999px;
-        top: 15px;
-        width: 38px;
-    }
-    .button-open-form {
-        bottom: 0;
-        display: block;
-        left: 0;
-        position: fixed;
-        right: 0;
-        z-index: 50;
-    }
-    .button-open-form button {
-        background: url(./img/ico-arrow-right.png) calc(100% - 20px) 50% no-repeat #E81527;
-        background-size: 27px 15px;
-        color: #fff;
-        cursor: pointer;
-        font-family: "ToyotaType-Semibold";
-        font-size: 14px;
-        height: 50px;
-        padding-left: 20px;
-        text-align: left;
-        text-transform: uppercase;
-        width: 100%; 
-    }
-    .main-form {
-        background-color: #000;
-        bottom: 0;
-        display: none;
-        height: 100vh;
-        left: 0;
-        overflow: auto;
-        padding: 0 40px;
-        right: 0;
-        top: 0;
-        width: 100vw;
-        z-index: 100;
-    }
-    .form-container {
-        padding-bottom: 80px;
-        padding-top: 80px;
-    }
-    .form-container h3 {
-        font-size: 15px;
-        letter-spacing: 1px;
-        line-height: 24px;
-        margin-bottom: 35px;
-        margin-right: 0;
-    }
-    .form-container .field,
-    .form-container select {
-        -webkit-appearance: none;
-        background-color: transparent;
-        border: 1px solid #fff;
-        border-radius: 0;
-        color: #fff;
-        font-family: "ToyotaType-Regular";
-        font-size: 15px;
-        height: 45px;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        outline: 0;
-        padding: 0 15px;
-        width: 100%;
-    }
-    /* .form-container select {
+  .container-logo-countdown {
+    top: 50px;
+    width: 440px;
+    left: 47%;
+  }
+  .button-close {
+    background: url(./img/btn-close.png) center no-repeat;
+    background-size: cover;
+    display: block;
+    height: 38px;
+    position: fixed;
+    right: 15px;
+    text-indent: -999999px;
+    top: 15px;
+    width: 38px;
+  }
+  .button-open-form {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 50;
+  }
+  .button-open-form button {
+    background: url(./img/ico-arrow-right.png) calc(100% - 20px) 50% no-repeat
+      #e81527;
+    background-size: 27px 15px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "ToyotaType-Semibold";
+    font-size: 14px;
+    height: 50px;
+    padding-left: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .main-form {
+    background-color: #000;
+    bottom: 0;
+    display: none;
+    height: 100vh;
+    left: 0;
+    overflow: auto;
+    padding: 0 40px;
+    right: 0;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+  }
+  .form-container {
+    padding-bottom: 80px;
+    padding-top: 80px;
+  }
+  .form-container h3 {
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    margin-bottom: 35px;
+    margin-right: 0;
+  }
+  .form-container .field,
+  .form-container select {
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 0;
+    color: #fff;
+    font-family: "ToyotaType-Regular";
+    font-size: 15px;
+    height: 45px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    outline: 0;
+    padding: 0 15px;
+    width: 100%;
+  }
+  /* .form-container select {
 
     } */
-    /* .form-container .checkbox {
+  /* .form-container .checkbox {
         display: none;
     } */
-    /* .form-container .checkbox-label::before {
+  /* .form-container .checkbox-label::before {
         height: 16px;
         margin-right: 5px;
         margin-top: 3px;
         width: 16px;
     } */
-    .checkbox-label {
-        font-size: 15px;
-    }
-    .form-button button {
-        background-size: 27px 15px;
-        font-size: 16px;
-        height: 55px;
-        padding-left: 30px;
-        margin-bottom: 80px;
-        margin-top: 20px;
-    }
-} 
+  .checkbox-label {
+    font-size: 15px;
+  }
+  .form-button button {
+    background-size: 27px 15px;
+    font-size: 16px;
+    height: 55px;
+    padding-left: 30px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+  }
+  #video-mobile {
+    display: block;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .container-countdown h2 {
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container-logo-countdown {
+    top: 34px;
+    width: 100%;
+    left: 50%;
+  }
+  .container-countdown {
+    padding: 0 50px;
+  }
+  .container-countdown h2 {
+    font-size: 20px;
+  }
+}
