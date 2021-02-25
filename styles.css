@@ -214,7 +214,7 @@ input {
 .form-container .checkbox {
   width: 1.5em;
   height: 1.3em;
-  background-color: black;
+  background-color: transparent;
   border-radius: 50%;
   margin-top: 1rem;
   border: 1px solid #ddd;
