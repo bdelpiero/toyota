@@ -61,6 +61,27 @@ h3 {
   text-align: center;
 }
 
+#countdown {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#countdown li {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  font-family: "ToyotaType-Light";
+}
+
+#countdown li span {
+  display: block;
+  font-size: 4.5rem;
+  font-family: "ToyotaType-Light";
+  border-bottom: 1px solid #fff;
+}
+
 #video-mobile {
   display: none;
 }
@@ -173,6 +194,16 @@ h3 {
     top: 50px;
     width: 440px;
     left: 47%;
+  }
+  #countdown li {
+    font-size: 1.125rem;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+    padding: 0.75;
+  }
+
+  #countdown li span {
+    width: 60px;
   }
   .button-close {
     background: url(./img/btn-close.png) center no-repeat;
@@ -295,5 +326,12 @@ h3 {
   }
   .container-countdown h2 {
     font-size: 20px;
+  }
+  #countdown li {
+    font-size: 12px;
+  }
+
+  #countdown li span {
+    width: 60px;
   }
 }
