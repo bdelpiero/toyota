@@ -31,18 +31,27 @@
     }, 0);
 })();
 
-function openForm() {
-  const form = document.querySelector(".main-form");
-  const counter = document.querySelector(".main-countdown");
+const form = document.querySelector(".main-form");
+const counter = document.querySelector(".main-countdown");
+const mql = window.matchMedia('(max-width: 770px)');
 
+function openForm() {
   form.style.display = "flex";
   counter.style.display = "none";
 }
 
 function closeForm() {
-  const form = document.querySelector(".main-form");
-  const counter = document.querySelector(".main-countdown");
-
   form.style.display = "none";
   counter.style.display = "block";
 }
+
+// resets corresponding styles when the media query takes effect
+mql.addEventListener( "change", (e) => {
+  if (!e.matches) {
+    form.style.display = "flex";
+    counter.style.display = "block";
+  } else {
+    form.style.display = "none";
+  }
+})
+

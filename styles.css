@@ -90,20 +90,21 @@ video {
 #countdown li {
   color: #fff;
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1em;
   list-style-type: none;
   padding: 1em;
   font-family: "ToyotaType-Light";
-  font-size: 70px;
 }
 
 #countdown li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-family: "ToyotaType-Light";
   border-bottom: 1px solid #fff;
-  margin-bottom: 10px;
+  padding-bottom: 15px;
   text-align: center;
+  margin-bottom: 10px;
+  width: 80px;
 }
 
 #video-mobile {
@@ -123,21 +124,22 @@ video {
     align-items: center;
     flex-wrap: wrap;
     height: 100%;
-    /* padding: 0 4.166666666666666vw; */
+    padding: 0 4.166666666666666vw;
     position: fixed;
     /* right: 0; */
     bottom: 2vh;
     top: 0;
     right: 15px;
-    /* width: 28.125vw; */
+    width: 28.125vw;
+    margin-right: 15px;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-bottom: 3.125vw;
-  padding-top: 8.854166666666668vw; */
+  padding-bottom: 3vw;
+  padding-top: 3vw;
 }
 
 .button-close {
@@ -149,10 +151,10 @@ video {
   font-family: "ToyotaType-Regular";
   font-weight: lighter;
   font-style: italic;
-  /* letter-spacing: .05vw;
-    line-height: 1.5vw;
-    margin-bottom: 2.4vw;
-    margin-right: .5vw; */
+  letter-spacing: .05vw;
+  line-height: 1.5vw;
+  margin-bottom: 2.4vw;
+  margin-right: .5vw;
 }
 
 .form-container .field::placeholder {
@@ -174,6 +176,11 @@ video {
     color: #fff;
     font-family: "ToyotaType-Regular";
     width: 100%;
+    font-size: .78125vw;
+    height: 2.34375vw;
+    letter-spacing: 1px;
+    margin-bottom: .78125vw;
+    padding: 0 .78125vw;
 }
 
 .form-container select {
@@ -250,6 +257,7 @@ video {
   text-align: left;
   text-transform: uppercase;
   width: 100%;
+  margin-top: 1vw;
 }
 
 @media only screen and (max-width: 1366px) {
@@ -292,10 +300,8 @@ video {
     .main-form {
         padding: 0 55px;
         width: 385px;
+        margin-right: 0;
     }
-    /* .form-container{
-        padding-bottom: 45px;
-    } */
     .form-container .field,
     .form-container select {
         font-size: 11px;
