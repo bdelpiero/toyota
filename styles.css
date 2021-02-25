@@ -161,7 +161,7 @@ input {
   font-weight: lighter;
   font-style: italic;
   letter-spacing: .05vw;
-  line-height: 1.5vw;
+  /* line-height: 1.5vw; */
   margin-bottom: 2.4vw;
   margin-right: .5vw;
 }
