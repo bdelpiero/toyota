@@ -1,11 +1,22 @@
-// const dealerships = {
-//   "Buenos Aires": 
-// }
+const provinceSelect = document.getElementById("province-select");
+const dealershipSelect = document.getElementById("dealership-select");
+const form = document.querySelector(".main-form");
+const counter = document.querySelector(".main-countdown");
+const mql = window.matchMedia("(max-width: 770px)");
 
+function populateSelect(select, options) {
+  for (let i = 0; i < options.length; i++) {
+    let opt = options[i];
+    let el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    select.appendChild(el);
+  }
+}
 
+populateSelect(provinceSelect, Object.keys(dealerships));
 
 // https://codepen.io/AllThingsSmitty/pen/JJavZN
-
 (function () {
   const second = 1000,
     minute = second * 60,
@@ -37,10 +48,6 @@
     }, 0);
 })();
 
-const form = document.querySelector(".main-form");
-const counter = document.querySelector(".main-countdown");
-const mql = window.matchMedia('(max-width: 770px)');
-
 function openForm() {
   form.style.display = "flex";
   counter.style.display = "none";
@@ -52,31 +59,30 @@ function closeForm() {
 }
 
 // resets corresponding styles when the media query takes effect
-mql.addEventListener( "change", (e) => {
+mql.addEventListener("change", (e) => {
   if (!e.matches) {
     form.style.display = "flex";
     counter.style.display = "block";
   } else {
     form.style.display = "none";
   }
-})
+});
 
-document.getElementById('province-select').onchange = function () {
-  // Array.from(this.children).forEach((item) => {
-  //   console.log(item.innerHTML);
-  // })
-  const dealershipOptions = document.getElementById("dealership-select");
+provinceSelect.onchange = function () {
+  if (this.value == "0") dealershipSelect.disabled = true;
+  else {
+    dealershipSelect.disabled = false;
+    dealershipSelect.innerHTML = "";
+    populateSelect(dealershipSelect, dealerships[this.value]);
+  }
+};
 
-  if (this.value == '0') 
-    dealershipOptions.disabled = true;
-  else
-    dealershipOptions.disabled = false;
-}
+// let arrayOfCities = [];
 
-let arrayOfCities = [];
+// Array.from(document.getElementById("dealership-select").children).forEach(
+//   (item) => {
+//     arrayOfCities.push(item.innerHTML);
+//   }
+// );
 
-Array.from(document.getElementById('dealership-select').children).forEach((item) => {
-  arrayOfCities.push(item.innerHTML)
-})
-
-console.log(arrayOfCities)
+// console.log(arrayOfCities);

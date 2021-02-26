@@ -1,6 +1,6 @@
 *,
 *::before,
-*::after  {
+*::after {
   border: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -29,6 +29,9 @@
   src: url("./fonts/TOYOTATYPE-SEMIBOLD.TTF") format("truetype");
 }
 
+label {
+  display: none;
+}
 
 h3 {
   display: block;
@@ -48,12 +51,16 @@ video {
 }
 
 input {
-  outline:none;
+  outline: none;
 }
 
-.container {
-    height: 100vh;
-    width: 100vw;
+#dealership-select:disabled {
+  opacity: 0.5;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
 }
 
 /* .phone-number {
@@ -64,14 +71,14 @@ input {
 /***** COUNTDOWN *****/
 
 .main-countdown {
-    height: 100vh;
-    position: relative;
-    width: calc(100vw - 28.125vw);
+  height: 100vh;
+  position: relative;
+  width: calc(100vw - 28.125vw);
 }
 
 .container-logo-countdown {
   display: block;
-  left: 52.5%; 
+  left: 52.5%;
   position: absolute;
   /* -webkit-transform: translate(-50%,0);
     -moz-transform: translate(-50%,0);
@@ -129,20 +136,20 @@ input {
 /***** FORM *****/
 
 .main-form {
-    z-index: 100;
-    -webkit-box-align: center;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
-    padding: 0 4.166666666666666vw;
-    position: fixed;
-    /* right: 0; */
-    bottom: 2vh;
-    top: 0;
-    right: 15px;
-    width: 28.125vw;
-    margin-right: 15px;
+  z-index: 100;
+  -webkit-box-align: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 0 4.166666666666666vw;
+  position: fixed;
+  /* right: 0; */
+  bottom: 2vh;
+  top: 0;
+  right: 15px;
+  width: 28.125vw;
+  margin-right: 15px;
 }
 
 .form-container {
@@ -154,7 +161,7 @@ input {
 }
 
 .button-close {
-    display: none; 
+  display: none;
 }
 
 .form-container h3 {
@@ -162,14 +169,14 @@ input {
   font-family: "ToyotaType-Regular";
   font-weight: lighter;
   font-style: italic;
-  letter-spacing: .05vw;
+  letter-spacing: 0.05vw;
   /* line-height: 1.5vw; */
   margin-bottom: 2.4vw;
-  margin-right: .5vw;
+  margin-right: 0.5vw;
 }
 
 .form-container .field::placeholder {
-    color: #fff;
+  color: #fff;
 }
 
 .form-container .email {
@@ -180,18 +187,18 @@ input {
 
 .form-container .field,
 .form-container select {
-    -webkit-appearance: none;
-    background-color: transparent;
-    border: 1px solid #fff;
-    border-radius: 0;
-    color: #fff;
-    font-family: "ToyotaType-Regular";
-    width: 100%;
-    font-size: .78125vw;
-    height: 2.34375vw;
-    letter-spacing: 1px;
-    margin-bottom: .78125vw;
-    padding: 0 .78125vw;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 0;
+  color: #fff;
+  font-family: "ToyotaType-Regular";
+  width: 100%;
+  font-size: 0.78125vw;
+  height: 2.34375vw;
+  letter-spacing: 1px;
+  margin-bottom: 0.78125vw;
+  padding: 0 0.78125vw;
 }
 
 select option {
@@ -223,8 +230,8 @@ select option {
 }
 
 .form-container .checkbox {
-  width: 1.5em;
-  height: 1.3em;
+  width: 1.3em;
+  height: 1.1em;
   background-color: transparent;
   border-radius: 50%;
   margin-top: 1rem;
@@ -241,7 +248,7 @@ select option {
 .checkbox-label {
   margin-top: 50px;
   color: #fff;
-
+  display: inline-block;
   font-family: "ToyotaType-Light";
   font-size: 0.78125vw;
   letter-spacing: 1px;
@@ -267,13 +274,13 @@ select option {
 .form-button button {
   background: url(../images/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat
     #e81527;
-  background-size: 1.40625vw .78125vw;
+  background-size: 1.40625vw 0.78125vw;
   color: #fff;
   cursor: pointer;
   font-family: "ToyotaType-Semibold";
-  font-size: .8333333333333334vw;
-    height: 3.385416666666667vw;
-    padding-left: 1.5625vw;
+  font-size: 0.8333333333333334vw;
+  height: 3.385416666666667vw;
+  padding-left: 1.5625vw;
   text-align: left;
   text-transform: uppercase;
   width: 100%;
@@ -281,72 +288,69 @@ select option {
 }
 
 @media only screen and (max-width: 1366px) {
-    
-    /***** COUNTDOWN *****/
+  /***** COUNTDOWN *****/
 
-    .container-logo-countdown {
-        top: 70px;
-        /* width: 34.63541666666667vw; */
-    }
-    .main-countdown {
-        width: calc(100vw - 400px);
-    }
+  .container-logo-countdown {
+    top: 70px;
+    /* width: 34.63541666666667vw; */
+  }
+  .main-countdown {
+    width: calc(100vw - 400px);
+  }
 
-    .container-countdown h2 { 
-        font-size: 1.464128843338214vw;
-        margin-top: 1.464128843338214vw;
-    }
+  .container-countdown h2 {
+    font-size: 1.464128843338214vw;
+    margin-top: 1.464128843338214vw;
+  }
 
-    #countdown {
-        width: 50vw;
-    }
-      
-    #countdown li {
-        /* font-size: 1.125rem; */
-        padding: 0.75rem;
-        font-size: 1rem;
-        padding: 0.75;
-    }
-    
-    #countdown li span {
-        width: 60px;
-        font-size: 2rem;
-        width: 70px;
-        padding-bottom: 10px;
-    }
-   
+  #countdown {
+    width: 50vw;
+  }
 
-    /***** FORM *****/
-    .main-form {
-        padding: 0 55px;
-        width: 385px;
-        margin-right: 0;
-    }
-    .form-container .field,
-    .form-container select {
-        font-size: 11px;
-        height: 32px;
-        margin-bottom: 10px;
-        padding: 0 15px;
-    }
-    .form-button button {
-        background-size: 27px 15px;
-        font-size: 11px;
-        height: 46px;
-        padding-left: 20px;
-        margin-top: 20px;
-    }
-    .form-container .checkbox {
-        width: 1.2em;
-        height: 0.9rem;
-    }
-    .checkbox-label {
-        font-size: 11px;
-    }
+  #countdown li {
+    /* font-size: 1.125rem; */
+    padding: 0.75rem;
+    font-size: 1rem;
+    padding: 0.75;
+  }
+
+  #countdown li span {
+    width: 60px;
+    font-size: 2rem;
+    width: 70px;
+    padding-bottom: 10px;
+  }
+
+  /***** FORM *****/
+  .main-form {
+    padding: 0 55px;
+    width: 385px;
+    margin-right: 0;
+  }
+  .form-container .field,
+  .form-container select {
+    font-size: 11px;
+    height: 32px;
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  .form-button button {
+    background-size: 27px 15px;
+    font-size: 11px;
+    height: 46px;
+    padding-left: 20px;
+    margin-top: 20px;
+  }
+  .form-container .checkbox {
+    width: 1.3em;
+    height: 0.9rem;
+  }
+  .checkbox-label {
+    font-size: 11px;
+  }
 }
 
 @media only screen and (max-width: 770px) {
-
   /***** COUNTDOWN *****/
   .main-countdown {
     height: 100vh;
@@ -361,7 +365,7 @@ select option {
     left: 0;
   }
   #video-desktop {
-      display: none;
+    display: none;
   }
   .container-logo-countdown {
     top: 50px;
@@ -374,7 +378,7 @@ select option {
   }
 
   #countdown {
-      width: 100%;
+    width: 100%;
   }
 
   #countdown li {
@@ -401,8 +405,8 @@ select option {
     z-index: 50;
   }
   .button-open-form button {
-    background: url(../images/ico-arrow-right.png) calc(100% - 20px) 50% no-repeat
-      #e81527;
+    background: url(../images/ico-arrow-right.png) calc(100% - 20px) 50%
+      no-repeat #e81527;
     background-size: 27px 15px;
     color: #fff;
     cursor: pointer;
@@ -442,7 +446,7 @@ select option {
     width: 38px;
   }
   .form-container {
-    padding-bottom: 0; 
+    padding-bottom: 0;
     padding-top: 80px;
   }
   .form-container h3 {
@@ -484,7 +488,6 @@ select option {
     padding-left: 30px;
     margin-bottom: 80px;
   }
-  
 }
 
 @media only screen and (max-width: 600px) {
@@ -514,16 +517,56 @@ select option {
 /***** Error messages ****/
 
 label.error {
-    display: block;
-    color: red;
-    margin: 3px 0;
-    font-family: "ToyotaType-Regular";
-    font-size: 10px;
-    /* display: block; */
+  display: block;
+  color: red;
+  margin: 3px 0;
+  font-family: "ToyotaType-Regular";
+  font-size: 10px;
+  /* display: block; */
 }
 
 .field.error,
 select.error {
-    border-color: red;
-    margin-bottom: 0;
+  border-color: red;
+  margin-bottom: 0;
+}
+
+/***** MODAL *****/
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
