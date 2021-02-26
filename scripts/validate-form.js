@@ -54,7 +54,7 @@
 (() => {
   const form = document.querySelector('form');
   const submitResponse = document.querySelector('#response');
-  const formURL = "https://apimocha.com/form/example";  // ENTER YOUR API ENDPOINT HERE
+  const formURL = "https://apimocha.com/form/vivaperon/1";  // ENTER YOUR API ENDPOINT HERE
 
   form.onsubmit = e => {
     e.preventDefault();
