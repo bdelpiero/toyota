@@ -54,7 +54,7 @@
 (() => {
   const form = document.querySelector('form');
   const submitResponse = document.querySelector('#response');
-  const formURL = "https://cors-anywhere.herokuapp.com/https://apimocha.com/form/vivaperon/1";  // ENTER YOUR API ENDPOINT HERE
+  const formURL = "https://apimocha.com/form1/example1";  // ENTER YOUR API ENDPOINT HERE
 
   form.onsubmit = e => {
     e.preventDefault();

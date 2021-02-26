@@ -1,3 +1,9 @@
+// const dealerships = {
+//   "Buenos Aires": 
+// }
+
+
+
 // https://codepen.io/AllThingsSmitty/pen/JJavZN
 
 (function () {
@@ -55,3 +61,22 @@ mql.addEventListener( "change", (e) => {
   }
 })
 
+document.getElementById('province-select').onchange = function () {
+  // Array.from(this.children).forEach((item) => {
+  //   console.log(item.innerHTML);
+  // })
+  const dealershipOptions = document.getElementById("dealership-select");
+
+  if (this.value == '0') 
+    dealershipOptions.disabled = true;
+  else
+    dealershipOptions.disabled = false;
+}
+
+let arrayOfCities = [];
+
+Array.from(document.getElementById('dealership-select').children).forEach((item) => {
+  arrayOfCities.push(item.innerHTML)
+})
+
+console.log(arrayOfCities)
