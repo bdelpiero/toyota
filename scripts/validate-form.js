@@ -54,7 +54,7 @@
 (() => {
   const form = document.querySelector('form');
   const submitResponse = document.querySelector('#response');
-  const formURL = "https://apimocha.com/form/vivaperon/1";  // ENTER YOUR API ENDPOINT HERE
+  const formURL = "https://cors-anywhere.herokuapp.com/https://apimocha.com/form/vivaperon/1";  // ENTER YOUR API ENDPOINT HERE
 
   form.onsubmit = e => {
     e.preventDefault();
@@ -69,6 +69,7 @@
     xhr.open(form.method, formURL, true);
     xhr.setRequestHeader('Accept', 'application/json; charset=utf-8');
     xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+
 
     // Send the collected data as JSON
     xhr.send(JSON.stringify(data));
