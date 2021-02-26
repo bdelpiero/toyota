@@ -99,7 +99,7 @@ input {
 #countdown li {
   color: #fff;
   display: inline-block;
-  font-size: 1em;
+  /* font-size: 1em; */
   list-style-type: none;
   padding: 1em;
   font-family: "ToyotaType-Light";
@@ -171,7 +171,7 @@ input {
 }
 
 .form-container .email {
-  background: url(./img/Icono\ Candado.png) calc(100% - 17px) 50% no-repeat
+  background: url(../images/Icono\ Candado.png) calc(100% - 17px) 50% no-repeat
     transparent;
   background-size: 16px 20px;
 }
@@ -194,7 +194,7 @@ input {
 
 .form-container select {
   appearance: none;
-  background: url(./img/ico-arrow-down.png) calc(100% - 17px) 50% no-repeat
+  background: url(../images/ico-arrow-down.png) calc(100% - 17px) 50% no-repeat
     transparent;
   background-size: 14px 7px;
   /* background-size: .7291666666666666vw .3645833333333333vw; */
@@ -254,7 +254,7 @@ input {
 }
 
 .form-button button {
-  background: url(./img/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat
+  background: url(../images/ico-arrow-right.png) calc(100% - 30px) 50% no-repeat
     #e81527;
   background-size: 1.40625vw .78125vw;
   color: #fff;
@@ -390,7 +390,7 @@ input {
     z-index: 50;
   }
   .button-open-form button {
-    background: url(./img/ico-arrow-right.png) calc(100% - 20px) 50% no-repeat
+    background: url(../images/ico-arrow-right.png) calc(100% - 20px) 50% no-repeat
       #e81527;
     background-size: 27px 15px;
     color: #fff;
@@ -420,7 +420,7 @@ input {
     z-index: 100;
   }
   .button-close {
-    background: url(./img/btn-close.png) center no-repeat;
+    background: url(../images/btn-close.png) center no-repeat;
     background-size: cover;
     display: block;
     height: 38px;

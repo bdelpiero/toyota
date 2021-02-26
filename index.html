@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
     <title>Toyota - teaser</title>
 </head>
 <body>
@@ -12,9 +14,9 @@
         <div class="main-form">
                 <span class="button-close" onclick="closeForm()"></span>
                 <div class="form-container">
-                    <img src="./img/Logo Toyota Cross.png" alt="">
+                    <img src="./images/Logo Toyota Cross.png" alt="">
                     <h3>SEA EL PRIMERO EN RECIBIR LAS NOVEDADES DEL NUEVO COROLLA CROSS</h3>
-                    <form action="" name="registration">
+                    <form action="" method="POST" name="registration">
                         <label for="firstname"></label>
                         <input class="field" type="text" name="firstname" id="firstname" placeholder="Nombre*" />
 
@@ -36,10 +38,10 @@
                             </div>
                         </div>
 
-                        <label for="province"></label>
+                        <!-- <label for="province"></label>
                         <select name="province" name="province" id="province">
                             <option value="">Provincia</option>
-                        </select>
+                        </select> 
                         
                         <label for="city"></label>
                         <select name="city" name="city" id="city">
@@ -49,7 +51,7 @@
                         <label for="dealership"></label>
                         <select name="dealership" name="dealership" id="dealership">
                             <option value="">Concesionario</option>
-                        </select>
+                        </select>  -->
 
                         <div style="position: relative; display: flex; justify-content: flex-start;">
                             <input class="checkbox" type="checkbox" name="privacy_policy" id="privacy_policy" name="privacy_policy" style='display:inline-block; margin: 3px 5px 0 0'>
@@ -66,14 +68,14 @@
         </div>
         <div class="main-countdown">
             <video autoplay muted loop id="video-mobile">
-                <source src="./img/Video Teaser Toyota Corolla Cross Mobile.mp4" type="video/mp4">
-                <!-- <source src="./img/Video-Teaser-Toyota-Corolla-Cross-Mobile.ogg" type="video/ogg"/> -->
-                <source src="./img/Video Teaser Toyota Corolla Cross Mobile.webm" type="video/webm"/>
+                <source src="./images/Video Teaser Toyota Corolla Cross Mobile.mp4" type="video/mp4">
+                <!-- <source src="./images/Video-Teaser-Toyota-Corolla-Cross-Mobile.ogg" type="video/ogg"/> -->
+                <source src="./images/Video Teaser Toyota Corolla Cross Mobile.webm" type="video/webm"/>
             </video>
             <video autoplay muted loop id="video-desktop">
-                <source src="./img/Video Teaser Toyota Corolla Cross Desktop.mp4" type="video/mp4">
-                <!-- <source src="./img/Video-Teaser-Toyota-Corolla-Cross-Desktop.ogg" type="video/ogg"/> -->
-                <source src="./img/Video Teaser Toyota Corolla Cross Desktop.webm" type="video/webm"/>
+                <source src="./images/Video Teaser Toyota Corolla Cross Desktop.mp4" type="video/mp4">
+                <!-- <source src="./images/Video-Teaser-Toyota-Corolla-Cross-Desktop.ogg" type="video/ogg"/> -->
+                <source src="./images/Video Teaser Toyota Corolla Cross Desktop.webm" type="video/webm"/>
             </video>
             <div class="container-logo-countdown">
                 <div class="container-countdown">
@@ -96,10 +98,8 @@
         </div>
     </div>
     
-    <script src="./js/index.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
-    <script src="./js/validate-form.js"></script>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/validate-form.js"></script>
 
 </body>
 </html>
