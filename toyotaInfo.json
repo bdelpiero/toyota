@@ -1,0 +1,113 @@
+{
+  "Buenos Aires": {
+    "Bahía Blanca": ["Autos del Sur"],
+    "La Plata": ["Autosiglo"],
+    "Mar del Plata": ["Autosiglo"],
+    "Ituzaingó": ["Asahi Motors"],
+    "Pilar": ["Del Pilar"],
+    "San Miguel": ["San Miguel"],
+    "Trenque Lauquen": ["BHASSA"],
+    "Olavarría": ["Catriel Mapú"],
+    "9 de Julio": ["Catriel Mapú"],
+    "Azul": ["Catriel Mapú"],
+    "Arrecifes": ["Pichetti"],
+    "Pergamino": ["Pichetti"],
+    "Junín": ["Pichetti"],
+    "Lobos": ["Gustavo Ricciardi", "Gustavo Ricciardi"],
+    "Mercedes": ["Gustavo Ricciardi"],
+    "Acassuso": ["Sarthou"],
+    "Carupá, Tigre": ["Sarthou"],
+    "Vicente López": ["Treos", "Treos"],
+    "San Martín": ["Treos"],
+    "El Talar": ["Toyota Panamericana"],
+    "Campana": ["Toyota Panamericana"],
+    "Tres Arroyos": ["Uzcudun"],
+    "Necochea": ["Uzcudun"],
+    "Tandil": ["Uzcudun"],
+    "Lanús": ["Zento"],
+    "Adrogué": ["Zento"]
+  },
+  "Capital Federal": {
+    "Capital Federal": [
+      "Accesorios y Repuestos",
+      "Accesorios y Repuestos",
+      "CerritoCar",
+      "Peru Automotores",
+      "Peru Automotores",
+      "Federico",
+      "Federico",
+      "Federico",
+      "Jorge Ferro",
+      "Jorge Ferro",
+      "Kansai",
+      "Kansai",
+      "Kansai",
+      "Kansai",
+      "Viola",
+      "Viola",
+      "Toyota Nuñez",
+      "Prana",
+      "Prana",
+      "Prana"
+    ]
+  },
+  "Catamarca": { "San Fernando del Valle de Catamarca": ["Del Parque"] },
+  "Chaco": {
+    "R.S. Peña": ["Derka y Vargas"],
+    "Resistencia": ["Derka y Vargas"],
+    "Villa Angela": ["Derka y Vargas"],
+    "Charata": ["Derka y Vargas"]
+  },
+  "Chubut": {
+    "Trelew": ["Autos del Sur"],
+    "Puerto Madryn": ["Autos del Sur"],
+    "Esquel": ["Autos del Sur"],
+    "Cdoro. Rivadavia": ["Tsuyoi"]
+  },
+  "Corrientes": { "Mercedes": ["Audec"], "Corrientes": ["Audec"] },
+  "Córdoba": {
+    "Villa María": ["Alem Motors"],
+    "Río Cuarto": ["Alem Motors"],
+    "Córdoba": ["Centro Motor", "Centro Motor"],
+    "Arroyito": ["Centro Motor"],
+    "San Francisco": ["Milanesio"],
+    "Monte Maiz": ["Ginza"]
+  },
+  "Entre Ríos": {
+    "Paraná": ["Haimovich"],
+    "Estancia Grande": ["Haimovich"],
+    "Concepción del Uruguay": ["Piñeyro y Moscatelli"]
+  },
+  "Formosa": { "Formosa": ["Homu"] },
+  "Jujuy": { "S. S. De Jujuy": ["Autolux"] },
+  "La Pampa": { "Santa Rosa": ["BHASSA"], "Gral. Pico": ["BHASSA"] },
+  "La Rioja": { "La Rioja": ["Bosetti Automotores"] },
+  "Mendoza": {
+    "Godoy Cruz": ["Yacopini", "Yacopini"],
+    "San Rafael": ["Yacopini"]
+  },
+  "Misiones": { "Posadas": ["TM"], "Eldorado": ["TM"] },
+  "Neuquén": { "Neuquén": ["Nippon Car"] },
+  "Río Negro": {
+    "S.C. De Bariloche": ["Nippon Car", "Nippon Car"],
+    "Gral. Roca": ["Nippon Car", "Nippon Car"]
+  },
+  "Salta": { "Salta": ["Autolux"], "Tartagal": ["Autolux"] },
+  "San Juan": { "San Juan": ["Señor Gonzalez"] },
+  "San Luis": { "San Luis": ["Alianz"], "Villa Mercedes": ["Alianz"] },
+  "Santa Cruz": { "Rio Gallegos": ["Tsuyoi"], "Las Heras": ["Tsuyoi"] },
+  "Santa Fe": {
+    "Santa Fe": ["Amiun", "Amiun"],
+    "Rafaela": ["Amiun"],
+    "Reconquista": ["Amiun"],
+    "Rosario": ["Autorosario", "Ginza", "Ginza"],
+    "Venado Tuerto": ["Mendez"],
+    "San Jorge": ["Milanesio"]
+  },
+  "Santiago del Estero": { "Santiago del Estero": ["Senna"] },
+  "Tierra del Fuego": {
+    "Ushuaia": ["Celentano Motors"],
+    "Río Grande": ["Celentano Motors"]
+  },
+  "Tucumán": { "S.M. de Tucumán": ["Line-Up"] }
+}

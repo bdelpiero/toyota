@@ -1,4 +1,4 @@
-// Get the modal
+// Open success modal
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
@@ -46,12 +46,38 @@ $(function () {
       city: "Campo requerido",
       dealership: "Campo requerido",
     },
-    // Make sure the form is submitted to the destination defined
-    // in the "action" attribute of the form when valid
+
     submitHandler: function (form) {
+      // Show success modal
       modal.style.display = "block";
-      // form.submit();
-      return false;
+
+      const form = document.querySelector("form");
+      const submitResponse = document.querySelector("#response");
+      const formURL = "http://localhost:3000"; // ENTER YOUR API ENDPOINT HERE
+
+      // Capture the form data
+      let data = {};
+      Array.from(form).map((input) => (data[input.id] = input.value));
+      console.log("Sending: ", JSON.stringify(data));
+
+      // Create the AJAX request
+      var xhr = new XMLHttpRequest();
+      xhr.open(form.method, formURL, true);
+      xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
+      xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+
+      // Send the collected data as JSON
+      xhr.send(JSON.stringify(data));
+
+      xhr.onloadend = (response) => {
+        if (response.target.status === 200) {
+          form.reset();
+          submitResponse.innerHTML = "Form submitted. Success!";
+        } else {
+          submitResponse.innerHTML = "Error! Please try again.";
+          console.error(JSON.parse(response.target.response).message);
+        }
+      };
     },
   });
 });
@@ -67,37 +93,3 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
-
-// (() => {
-//   const form = document.querySelector("form");
-//   const submitResponse = document.querySelector("#response");
-//   const formURL = "https://apimocha.com/form1/example1"; // ENTER YOUR API ENDPOINT HERE
-
-//   form.onsubmit = (e) => {
-//     e.preventDefault();
-
-//     // Capture the form data
-//     let data = {};
-//     Array.from(form).map((input) => (data[input.id] = input.value));
-//     console.log("Sending: ", JSON.stringify(data));
-
-//     // Create the AJAX request
-//     var xhr = new XMLHttpRequest();
-//     xhr.open(form.method, formURL, true);
-//     xhr.setRequestHeader("Accept", "application/json; charset=utf-8");
-//     xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
-
-//     // Send the collected data as JSON
-//     xhr.send(JSON.stringify(data));
-
-//     xhr.onloadend = (response) => {
-//       if (response.target.status === 200) {
-//         form.reset();
-//         submitResponse.innerHTML = "Form submitted. Success!";
-//       } else {
-//         submitResponse.innerHTML = "Error! Please try again.";
-//         console.error(JSON.parse(response.target.response).message);
-//       }
-//     };
-//   };
-// })();
