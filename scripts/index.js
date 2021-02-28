@@ -1,20 +1,41 @@
 const provinceSelect = document.getElementById("province-select");
+const citySelect = document.getElementById("city-select");
 const dealershipSelect = document.getElementById("dealership-select");
 const form = document.querySelector(".main-form");
 const counter = document.querySelector(".main-countdown");
 const mql = window.matchMedia("(max-width: 770px)");
 
 function populateSelect(select, options) {
-  for (let i = 0; i < options.length; i++) {
-    let opt = options[i];
-    let el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
+  // we need to add an extra first element to each select
+  // we could factor this out to a separate function?
+  let firstElement = "";
+  if (select.id == "province-select") firstElement = "Provincia";
+  if (select.id == "city-select") firstElement = "Ciudad";
+  if (select.id == "dealership-select") firstElement = "Concesionaria";
+
+  for (let i = 0; i < options.length + 1; i++) {
+    const el = document.createElement("option");
+
+    if (i != 0) {
+      const opt = options[i - 1];
+      el.textContent = opt;
+      el.value = opt;
+    } else {
+      el.textContent = firstElement;
+      el.value = "0";
+      el.disabled = true;
+      el.selected = true;
+    }
+
     select.appendChild(el);
   }
 }
 
-populateSelect(provinceSelect, Object.keys(dealerships));
+// with data.js
+// populateSelect(provinceSelect, Object.keys(dealerships));
+
+// with newData.js
+populateSelect(provinceSelect, Object.keys(toyotaDealershipsInfo));
 
 // https://codepen.io/AllThingsSmitty/pen/JJavZN
 (function () {
@@ -69,20 +90,39 @@ mql.addEventListener("change", (e) => {
 });
 
 provinceSelect.onchange = function () {
-  if (this.value == "0") dealershipSelect.disabled = true;
-  else {
-    dealershipSelect.disabled = false;
-    dealershipSelect.innerHTML = "";
-    populateSelect(dealershipSelect, dealerships[this.value]);
+  if (this.value == "0") {
+    // with data.js
+    // dealershipSelect.disabled = true;
+
+    // with newData.js
+    citySelect.disabled = true;
+    dealershipSelect.disabled = true;
+  } else {
+    // with data.js
+    // dealershipSelect.disabled = false;
+    // dealershipSelect.innerHTML = "";
+    // populateSelect(dealershipSelect, dealerships[this.value]);
+
+    // with newData.js
+    citySelect.disabled = false;
+    dealershipSelect.disabled = true;
+    citySelect.innerHTML = "";
+    populateSelect(citySelect, Object.keys(toyotaDealershipsInfo[this.value]));
   }
 };
 
-// let arrayOfCities = [];
-
-// Array.from(document.getElementById("dealership-select").children).forEach(
-//   (item) => {
-//     arrayOfCities.push(item.innerHTML);
-//   }
-// );
-
-// console.log(arrayOfCities);
+// with newData.js
+citySelect.onchange = function () {
+  if (this.value == "0") {
+    // with data.js
+    dealershipSelect.disabled = true;
+  } else {
+    // with data.js
+    dealershipSelect.disabled = false;
+    dealershipSelect.innerHTML = "";
+    populateSelect(
+      dealershipSelect,
+      toyotaDealershipsInfo[provinceSelect.value][this.value]
+    );
+  }
+};

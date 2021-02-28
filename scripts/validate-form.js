@@ -28,6 +28,7 @@ $(function () {
       province: "required",
       city: "required",
       dealership: "required",
+      privacy_policy: "required",
     },
     // Specify validation error messages
     messages: {
@@ -45,13 +46,14 @@ $(function () {
       province: "Campo requerido",
       city: "Campo requerido",
       dealership: "Campo requerido",
+      privacy_policy: "",
     },
 
     submitHandler: function (form) {
       // Show success modal
       modal.style.display = "block";
 
-      const form = document.querySelector("form");
+      // const form = document.querySelector("form");
       const submitResponse = document.querySelector("#response");
       const formURL = "http://localhost:3000"; // ENTER YOUR API ENDPOINT HERE
 
@@ -72,12 +74,13 @@ $(function () {
       xhr.onloadend = (response) => {
         if (response.target.status === 200) {
           form.reset();
-          submitResponse.innerHTML = "Form submitted. Success!";
+          // submitResponse.innerHTML = "Form submitted. Success!";
         } else {
           submitResponse.innerHTML = "Error! Please try again.";
           console.error(JSON.parse(response.target.response).message);
         }
       };
+      return false;
     },
   });
 });
