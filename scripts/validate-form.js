@@ -55,7 +55,7 @@ $(function () {
 
       // const form = document.querySelector("form");
       const submitResponse = document.querySelector("#response");
-      const formURL = "http://localhost:3000"; // ENTER YOUR API ENDPOINT HERE
+      const formURL = "https://api-toyota-testing.herokuapp.com/"; // ENTER YOUR API ENDPOINT HERE
 
       // Capture the form data
       let data = {};
@@ -72,8 +72,10 @@ $(function () {
       xhr.send(JSON.stringify(data));
 
       xhr.onloadend = (response) => {
+        console.log(response);
         if (response.target.status === 200) {
           form.reset();
+          startSelects();
           // submitResponse.innerHTML = "Form submitted. Success!";
         } else {
           submitResponse.innerHTML = "Error! Please try again.";

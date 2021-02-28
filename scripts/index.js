@@ -31,11 +31,31 @@ function populateSelect(select, options) {
   }
 }
 
-// with data.js
-// populateSelect(provinceSelect, Object.keys(dealerships));
+function startSelects() {
+  console.log("acá");
+  // with data.js
+  // populateSelect(provinceSelect, Object.keys(dealerships));
 
-// with newData.js
-populateSelect(provinceSelect, Object.keys(toyotaDealershipsInfo));
+  // with newData.js
+  populateSelect(provinceSelect, Object.keys(toyotaDealershipsInfo));
+  const otherSelects = [citySelect, dealershipSelect];
+  const options = ["Ciudad", "Concesionaria"];
+  for (let i = 0; i < options.length; i++) {
+    const select = otherSelects[i];
+    select.innerHTML = "";
+    const el = document.createElement("option");
+    const opt = options[i];
+    el.textContent = opt;
+    el.value = opt;
+    el.value = "0";
+    el.selected = true;
+    el.disabled = true;
+    select.disabled = true;
+    select.appendChild(el);
+  }
+}
+
+startSelects();
 
 // https://codepen.io/AllThingsSmitty/pen/JJavZN
 (function () {
@@ -95,6 +115,7 @@ provinceSelect.onchange = function () {
     // dealershipSelect.disabled = true;
 
     // with newData.js
+
     citySelect.disabled = true;
     dealershipSelect.disabled = true;
   } else {

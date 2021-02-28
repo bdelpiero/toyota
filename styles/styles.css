@@ -54,6 +54,15 @@ input {
   outline: none;
 }
 
+/* Removes autfill styles added by browser */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+  -webkit-transition: background-color 9999s ease-out;
+}
+
 #dealership-select:disabled {
   opacity: 0.5;
 }
@@ -188,7 +197,8 @@ input {
 .form-container .field,
 .form-container select {
   -webkit-appearance: none;
-  background-color: transparent;
+  background-color: transparent !important;
+  background-color: black !important;
   border: 1px solid #fff;
   border-radius: 0;
   color: #fff;
@@ -327,6 +337,7 @@ select option {
     width: 385px;
     margin-right: 0;
   }
+
   .form-container .field,
   .form-container select {
     font-size: 11px;
@@ -456,6 +467,7 @@ select option {
     margin-bottom: 35px;
     margin-right: 0;
   }
+
   .form-container .field,
   .form-container select {
     -webkit-appearance: none;
